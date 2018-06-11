@@ -2,7 +2,7 @@
 
 [![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](LICENSE.md)
 
-Provides generation and proxy of shortened URLs in a Laravel application.
+Provides generation and serving of shortened URLs in a Laravel application.
 
 
 ## Overview
@@ -11,7 +11,7 @@ Provides generation and proxy of shortened URLs in a Laravel application.
 
 * Install this package in your Laravel application.
 * Run the database migration to create the table for storing URLs.
-* Add URLs, manually via the UI, or programatically via the `TinyService` class.
+* Add URLs manually via the web UI, or programatically via the `TinyService` class.
 
 ### Architecture
 
@@ -95,7 +95,7 @@ Once stored, a URL can be accessed via the `<mydomain>/tiny/{hash}` package rout
 
 ## Tests
 
-Tests can be run in the usual way as described in the [test documentation](./tests/README.md).
+Tests can be run in the usual way, as described in the [test documentation](./tests/README.md).
 
 ## License
 
