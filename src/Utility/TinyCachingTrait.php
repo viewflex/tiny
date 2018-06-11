@@ -20,7 +20,7 @@ trait TinyCachingTrait
      */
     static public function cacheKey($query_name, $value)
     {
-        return md5('notifier_'.$query_name.'_'.strval($value));
+        return md5('tiny_'.$query_name.'_'.strval($value));
     }
 
     /**
