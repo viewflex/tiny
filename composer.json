@@ -1,7 +1,7 @@
 {
   "name": "viewflex/tiny",
-  "description": "Provides generation and proxy of shortened URLs in a Laravel application.",
-  "keywords": ["laravel", "url shortener", "url encoder", "url proxy"],
+  "description": "Provides generation and serving of shortened URLs in a Laravel application.",
+  "keywords": ["laravel", "url shortener", "url encoder", "shortened url server"],
   "authors": [
     {
       "name": "Adam Sailor",
