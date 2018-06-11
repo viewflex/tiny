@@ -2,7 +2,7 @@
 
 [![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](LICENSE.md)
 
-Provides generation and proxy of shortened URLs in a Laravel application.
+Provides generation and serving of shortened URLs in a Laravel application.
 
 
 ## Overview
@@ -11,7 +11,7 @@ Provides generation and proxy of shortened URLs in a Laravel application.
 
 * Install this package in your Laravel application.
 * Run the database migration to create the table for storing URLs.
-* Add URLs, manually via the UI, or programatically via the `Tiny` facade.
+* Add URLs manually via the web UI, or programatically via the `TinyService` class.
 
 ### Architecture
 
@@ -52,14 +52,14 @@ The `tiny.php` config file contains the package settings.
 
 ```php
 'caching'       => [
-	'active'            =>  true,
-	'minutes'           =>  1440
+	'active'        =>  true,
+	'minutes'       =>  1440
 ],
 
 'query'         => '\Viewflex\Tiny\Queries\TinyQuery',
 
 'tables'        => [
-	'urls'              => 'tiny_urls'
+	'urls'          => 'tiny_urls'
 ]
 ```
 
@@ -87,12 +87,15 @@ Here the table name is aliased, to allow using whatever table name you want with
 
 ### Adding URLs
 
-The `TinyController` provides a UI for adding URLs. Simply enter a URL and click the Save button. The URL will be displayed along with it's alias in the resulting message. The route `<mydomain>/tiny/create` is used to access the UI from a web browser. It is also quite easy to integrate the `TinyService` class into your own code, to generate and store URLs programmatically.
+The `TinyController` provides a UI for adding URLs. Simply enter a URL and click the Save button. The URL will be displayed along with it's alias in the resulting message. The route `<mydomain>/tiny/create` is used to access the UI from a web browser. It is also quite easy to integrate the `TinyService` class into your own code, to generate and store URLs programatically.
 
 ### Serving URLs
 
 Once stored, a URL can be accessed via the `<mydomain>/tiny/{hash}` package route. Of course, if necessary you can also create an additional route to hit the same controller method.
 
+## Tests
+
+Tests can be run in the usual way, as described in the [test documentation](./tests/README.md).
 
 ## License
 
