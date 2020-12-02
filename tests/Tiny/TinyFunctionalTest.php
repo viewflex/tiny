@@ -19,7 +19,7 @@ class TinyFunctionalTest extends TestCase
      */
     protected $tiny;
     
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
         TinyTestData::create(config('tiny.tables'));
